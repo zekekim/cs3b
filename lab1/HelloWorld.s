@@ -12,7 +12,7 @@
 // and then call Linux to do it.
 _start: mov    X0, #1          // 1 = StdOut
         ldr    X1, =helloworld // string to print
-        mov    X2, #13         // length of our string
+        mov    X2, #18         // length of our string
         mov    X8, #64         // Linux write system call
         svc    0               // Call Linux to output the string
 // Setup the parameters to exit the program
@@ -21,4 +21,5 @@ _start: mov    X0, #1          // 1 = StdOut
         mov    X8, #93   // Service code 93 terminates
         svc    0         // Call Linux to terminate
 .data
-helloworld: .ascii "Hello World!\n"
+helloworld: .ascii "Hello Dr Barnett!\n"
+.end

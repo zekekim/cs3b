@@ -1,0 +1,2 @@
+as -g -o lab3.o lab3.s
+ld -o lab3 lab3.o ../obj/putstring.o ../obj/putch.o ../obj/String_length.o

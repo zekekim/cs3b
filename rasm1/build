@@ -1,0 +1,2 @@
+as -g -o rasm1.o rasm1.s
+ld -o rasm1 rasm1.o ../obj/ascint64.o ../obj/int64asc.o ../obj/putstring.o ../obj/putch.o ../obj/String_length.o ../obj/getstring.o

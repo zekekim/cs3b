@@ -43,21 +43,22 @@ _start:
 	ldr	x0,	=szName // Store name to be printed
 	bl	putstring	// Print name
 	ldr	x0,	=chCr	// Store carriage return to be printed
-	bl	putstring	// Print carriage return
+	bl	putch	// Print carriage return
 	ldr	x0,	=szClas // Store Class to be printed
 	bl	putstring	// Print Class
 	ldr	x0,	=chCr	// Store carriage return to be printed
-	bl	putstring	// Print carriage return
+	bl	putch	// Print carriage return
 	ldr	x0,	=szLab	// Store Lab to be printed
 	bl	putstring	// Print Lab
 	ldr	x0,	=chCr	// Store carriage return to be printed
-	bl	putstring	// Print carriage return
+	bl	putch	// Print carriage return
 	ldr	x0,	=szDate	// Store Date to be printed
 	bl	putstring	// Print date
 	ldr	x0,	=chCr	// Store carriage return to be printed
-	bl	putstring	// print carriage return
+	bl	putch	// print carriage return
 	ldr	x0,	=chCr	// Store carriage return to be printed
-	bl	putstring	// print carriage return
+	bl	putch		// print carriage return
+
 // Start getting values for A,B,C,D
 	mov	x1, 	#21	// Every string will be storing 21 bytes
 // Get user input for A
@@ -80,6 +81,7 @@ _start:
 	bl	putstring	// Prompt user for input
 	ldr	x0,	=szD	// Set input variable as pointer to string D
 	bl	getstring	// Get user input
+
 // Now convert string A,B,C,D to integers in respective db variables
 // Initialize dbA using ascint64 and store pointer value
 	ldr	x0,	=szA	// Load szA to be converted
@@ -113,6 +115,7 @@ _start:
 	mov	x0,	x1	// Loads address of D
 	ldr	x1,	=szPd	// Loads x1 as string to receive pointer value
 	bl	int64asc	// Converts address to string
+
 // Setup for addition
 	ldr	x0,	=dbA	// Load dbA
 	ldr	x0,	[x0]	// Dereference
@@ -131,6 +134,7 @@ _start:
 // Convert result into string
 	ldr	x1,	=szSum	// Load x1 with result string
 	bl	int64asc	// Convert result into string szR
+
 // Print operations statement
 	ldr	x0,	=szOpp	// Load open paren to be printed
 	bl	putstring	// Print open paren
@@ -159,12 +163,13 @@ _start:
 	ldr	x0,	=szSum	// Load string sum to be printed
 	bl	putstring	// Print string sum
 	ldr	x0,	=chCr	// Load carriage return
-	bl	putstring	// Carriage Return
+	bl	putch		// Carriage Return
+
 // Print memory addresses for dbs
 	ldr	x0,	=szMsg2	// Load szMsg2 to be printed
 	bl	putstring	// Print szMsg2
 	ldr	x0,	=chCr	// Load Carriage return to be printed
-	bl	putstring	// Print Carriage Return
+	bl	putch		// Print Carriage Return
 	ldr	x0,	=szPa	// Load pointer A string to be printed
 	bl	putstring	// Print pointer A
 	ldr	x0,	=szSp	// Load spacer to be printed
@@ -180,7 +185,8 @@ _start:
 	ldr	x0,	=szPd	// Load pointer D string to be printed
 	bl	putstring	// Print pointer D
 	ldr	x0,	=chCr	// Load carriage return
-	bl	putstring	// Print carriage return
+	bl	putch		// Print carriage return
+
 // Setup the parameters to exit the program and then call Linux to do it.
 	mov	x0,	#0	// Sets return code to 0
 	mov	x8,	#93	// Service command code 93 terminates

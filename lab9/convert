@@ -1,0 +1,2 @@
+enscript lab9.s -o - | ps2pdf - lab9.pdf
+

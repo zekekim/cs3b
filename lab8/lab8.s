@@ -60,7 +60,14 @@ _start:
 	ldr	x0,	=szMsgv	// Value to store in szMsg
 	ldr	x0,	[x0]
 	ldr	x1,	=szMsg1	// Address to store szMsg
-	strd	x0,	[x1]	// Stores value into msg
+	str	x0,	[x1]	// Stores value into msg
+
+// For last two bits
+	ldr	x0,	=szMsgv	// Value before changing value
+	ldr	x1,	=szMsg1	// Value to reference where to store
+	add	x0,	x0,	#8
+	ldrh	w0,	[x0]
+	strh	w0,	[x1,	#8]
 
 // For dbBig
 	ldr	x0,	=dbBigv	// Value to store in dbBig

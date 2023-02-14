@@ -1,0 +1,2 @@
+
+enscript lab8.s -o - | ps2pdf - lab8.pdf

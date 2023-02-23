@@ -1,0 +1,2 @@
+enscript exam1.s -o - | ps2pdf - exam1.pdf
+

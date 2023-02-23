@@ -1,0 +1,2 @@
+enscript lab10.s -o - | ps2pdf - lab10.pdf
+

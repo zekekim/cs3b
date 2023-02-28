@@ -36,12 +36,28 @@
 		szInvalidString:	.asciz	"INVALID NUMERIC STRING. RE-ENTER VALUE\n"
 		szInvalidInteger:	.asciz	"NUMBER OUTSIDE ALLOWABLE 64 BIT SIGNED INTEGER RE-ENTER VALUE:\n"
 		szGoodbye:		.asciz	"Thanks for using my program!! Good day!"
+		szName:			.asciz	"    NAME:    Ezekiel Kim\n"
+		szProgram:		.asciz	"    PROGRAM: rasm2.asm\n"
+		szClass:		.asciz	"    CLASS:   CS3B\n"
+		szDate:			.asciz	"    DATE:    2/27/2023\n"
 		iLimitNum:	.word	21
 		chCr:	.byte	10
 		
 	.text
 
 _start:
+	ldr	x0,	=szName		// Print name
+	bl	putstring		// Print name
+	ldr	x0,	=szProgram	// Print program
+	bl	putstring		// Print program
+	ldr	x0,	=szClass	// Print class
+	bl	putstring		// print class
+	ldr	x0,	=szDate		// Print Date
+	bl	putstring		// Print Date
+	ldr	x0,	=chCr		// Print CR
+	bl	putch			// Print CR
+	ldr	x0,	=chCr		// Print CR
+	bl	putch			// Print CR
 
 promptA:
 	ldr	x0,	=szPmtA	// Prompt user for A

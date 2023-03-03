@@ -1,0 +1,2 @@
+enscript String_length.s -o - | ps2pdf - String_length.pdf
+

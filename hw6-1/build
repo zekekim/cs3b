@@ -1,0 +1,3 @@
+as -g -o driver.o driver.s
+as -g -o fact.o fact.s
+ld -o driver driver.o fact.o

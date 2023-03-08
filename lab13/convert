@@ -1,0 +1,2 @@
+enscript lab13.s -o - | ps2pdf - lab13.pdf
+

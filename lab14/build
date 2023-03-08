@@ -1,0 +1,3 @@
+as -g -o driver.o driver.s
+as -g -o ../obj/fact.o fact.s
+ld -o driver driver.o ../obj/ascint64.o ../obj/int64asc.o ../obj/putstring.o ../obj/putch.o ../obj/String_length.o ../obj/getstring.o ../obj/fact.o

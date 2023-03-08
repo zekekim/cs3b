@@ -1,0 +1,3 @@
+enscript driver.s -o - | ps2pdf - driver.pdf
+enscript fact.s -o - | ps2pdf - fact.pdf
+

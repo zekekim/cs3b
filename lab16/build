@@ -1,0 +1,2 @@
+as -g -o lab16.o lab16.s
+ld -o lab16 lab16.o ../obj/ascint64.o ../obj/int64asc.o ../obj/putstring.o ../obj/putch.o ../obj/String_length.o ../obj/getstring.o ../obj/fact.o

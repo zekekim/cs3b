@@ -1,0 +1,2 @@
+as -g -o lab18.o lab18.s
+ld -o lab18 /usr/lib/aarch64-linux-gnu/libc.so lab18.o -dynamic-linker /lib/ld-linux-aarch64.so.1 ../obj/putstring.o ../obj/String_length.o ../obj/putch.o

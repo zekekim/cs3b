@@ -1,0 +1,2 @@
+as -g -o EXAM2.o EXAM2.s
+ld -o EXAM2 /usr/lib/aarch64-linux-gnu/libc.so EXAM2.o -dynamic-linker /lib/ld-linux-aarch64.so.1 ../obj/putstring.o String.o ../obj/putch.o ../obj/getstring.o

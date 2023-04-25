@@ -35,25 +35,6 @@ String_toUpperCase:
 		ret
 
 
-.global String_length
-String_length:
-	stp	x19,	x20,	[sp, #-16]!
-	stp	x29,	x30,	[sp, #-16]!
-	mov	x19,	x0
-	mov	x0,	#0
-
-	String_length_loop:
-		ldrb	w1,	[x19,	x0]
-		cmp	w1,	#0
-		b	String_length_end
-		add	x0,	x0,	#1
-		b	String_length_loop
-
-	String_length_end:
-		ldp	x29,	x30,	[sp],	#16
-		ldp	x19,	x20,	[sp],	#16
-		ret
-
 .global String_copy
 String_copy:
 	stp	x19,	x20,	[sp, #-16]!
